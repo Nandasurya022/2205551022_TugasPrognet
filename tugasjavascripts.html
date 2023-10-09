@@ -43,102 +43,135 @@
   <!-- ======= Start Form ======= -->
   <section id="form" class="form-mf sect-pt4 route">
     <div class="container mt-4">
-      <h1 class="text-center">Biodata Anda</h1>
-        <form id="formbio" action="tampil.html" method="GET">
-          <div class="form-group mb-4">
-            <label for="namalengkap">Nama Lengkap :</label>
-            <input type="text" class="form-control" id="namalengkap" name="namalengkap" required>
+      <h1 class="text-center">Form Biodata Anda</h1>
+        <form name="formBiodata" action="tampil.php" method="post" onsubmit="return validateForm()">
+          <div class="form-group mb-3">
+            <label><strong>Nama lengkap :</strong></label>
+            <input type="text" name="namalengkap" placeholder="Nama Lengkap" class="form-control">
           </div>
-          <div class="form-group mb-4">
-            <label for="username">Username :</label>
-            <input type="text" class="form-control" id="username" name="username" required>
+          <div class="form-group mb-3">
+            <label><strong>NIM :</strong></label>
+            <input type="text" name="nim" placeholder="NIM" class="form-control">
           </div>
-          <div>
-            <label for="password" class="form-label">Password :</label>
-            <input type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock" required>
-            <div id="passwordHelpBlock" class="form-text mb-4">
-                Kata sandi harus berbentuk karakter 8-20, harus berisi huruf kapital, huruf kecil dan angka, dan tidak boleh mengandung spasi, karakter khusus, atau emoji.
-            </div>
+          <div class="form-group mb-3">
+            <label><strong>Email :</strong></label>
+            <input type="email" name="email" placeholder="nama@gmail.com" class="form-control">
           </div>
-          <div class="form-group mb-4">
-              <label for="nim">NIM :</label>
-              <input type="text" class="form-control" id="nim" name="nim" required>
+          <div class="form-group">
+            <label><strong>Username :</strong></label>
           </div>
-          <div class="form-group mb-4">
-            <label for="email">Email :</label>
-            <input type="text" class="form-control" id="email" name="email" required>
-        </div>
-          <div class="form-group mb-4">
-            <label for="agama" class="form-label">Agama :</label>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Pilih Salah Satu :</option>
-              <option value="Hindu">Hindu</option>
-              <option value="Islam">Islam</option>
-              <option value="Budha">Budha</option>
-              <option value="Kristen Protestan">Kristen Protestan</option>
-              <option value="Kristen Katolik">Kristen Katolik</option>
-              <option value="Kong Hu Chu">Kong Hu Chu</option>
-              <option value="Other">Other</option>
+          <div class="input-group flex-nowrap mb-3">
+            <span class="input-group-text" id="addon-wrapping">@</span>
+            <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+          </div>
+          <div class="form-group mb-3">
+            <label><strong>Password :</strong></label>
+            <input type="password" name="password" class="form-control" placeholder="Password" aria-describedby="passwordHelpBlock">
+          </div>
+          <div class="form-group mb-3">
+            <label><strong>Hobi :</strong></label>
+            <select name="hobi" class="form-control">
+              <option selected>Pilih Hobi Kesukaan Anda :</option>
+              <option value="Menjelajahi">Menjelajahi</option>
+              <option value="Berenang">Berenang</option>
+              <option value="Menari">Menari</option>
+              <option value="Menyanyi">Menyanyi</option>
+              <option value="Mendengarkan Musik">Mendengarkan Musik</option>
+              <option value="Menonton">Menonton</option>
+              <option value="Berolahraga">Berolahraga</option>
             </select>
           </div>
           <div>
-            <label for="jeniskelamin" class="form-label">Jenis Kelamin :</label>
+            <label"><strong>Jenis Kelamin :</strong></label>
+            <p><input class="me-1" type='radio' name='jeniskelamin' value='Laki - Laki'>Male</p>
+            <p><input class="me-1" type='radio' name='jeniskelamin' value='Perempuan'>Female</p>
+            <p><input class="me-1" type='radio' name='jeniskelamin' value='Tidak ingin Memberi Tahu'>Other</p>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="jeniskelamin" id="jeniskelamin" required>
-            <label class="form-check-label" for="jeniskelamin" value="Laki - Laki">
-              Laki-Laki
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="jeniskelamin" id="jeniskelamin" required>
-            <label class="form-check-label" for="jeniskelamin" value="Perempuan">
-              Perempuan
-            </label>
-          </div>
-          <div class="form-check mb-4">
-            <input class="form-check-input" type="radio" name="jeniskelamin" id="jeniskelamin" required>
-            <label class="form-check-label" for="jeniskelamin" value="Tidak inggin memberitahu">
-              Yang Lain
-            </label>
-          </div>
-          <div>
-            <label for="hobi" class="form-label">Pilih Salah Satu Yang Anda Suka  :</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="hobi" value="option1">
-            <label class="form-check-label" for="hobi">Menjelajah</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="hobi" value="option2">
-            <label class="form-check-label" for="hobi">Berenang</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="hobi" value="option3">
-            <label class="form-check-label" for="hobi">Menonton</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="hobi" value="option1">
-            <label class="form-check-label" for="hobi">Membaca</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="hobi" value="option2">
-            <label class="form-check-label" for="hobi">Mendengarkan Musik</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="hobi" value="option1">
-            <label class="form-check-label" for="hobi">Menulis</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="hobi" value="option2">
-            <label class="form-check-label" for="hobi">Menyanyi</label>
+          <div class="mb-3">
+            <label><strong>Mata Kuliah yang Anda Dapat Hari ini :</strong></label>
+            <p>
+              <input class="me-1" type='checkbox' name='matakuliah[]' value='Pemrograman Internet'>Pemrograman Internet
+              <input class="ms-4 me-1" type='checkbox' name='matakuliah[]' value='Pangkalan Data'>Pangkalan Data
+              <input class="ms-4 me-1" type='checkbox' name='matakuliah[]' value='Manajemen Jaringan dan Server'>Manajemen Jaringan dan Server
+              <input class="ms-4 me-1" type='checkbox' name='matakuliah[]' value='Pengolahan Citra Digital'>Pengolahan Citra Digital
+              <input class="ms-4 me-1" type='checkbox' name='matakuliah[]' value='Inovasi Teknologi InformasiI'>Inovasi Teknologi Informasi
+            <p></p>
+              <input class="me-1" type='checkbox' name='matakuliah[]' value='Interpersonal Life Skill '>Interpersonal Life Skill           
+              <input class="ms-4 me-1" type='checkbox' name='matakuliah[]' value='Rekayasa Perangkat Lunak'>Rekayasa Perangkat Lunak
+              <input class="ms-3 me-1" type='checkbox' name='matakuliah[]' value='Mata Kuliah Lainnya'>Other
+            </p>
           </div>
           <div>
-            <button type="submit" class="btn btn-primary mb-4">Submit</button>
+            <button type="submit" name="submit" class="btn btn-primary mb-4">Submit</button>
           </div>
-      </form>
-  </div>
-</section>
+        </form>
+      </div>
+    <script>
+      function validateForm() {
+        // Validasi Nama Lengkap
+        if (document.forms["formBiodata"]["namalengkap"].value == "") {
+            alert("Masukkan Nama Lengkap Anda");
+            document.forms["formBiodata"]["namalengkap"].focus();
+            return false;
+        }
+        // Validasi NIM
+        if (document.forms["formBiodata"]["nim"].value == "") {
+            alert("Masukkan NIM Anda");
+            document.forms["formBiodata"]["nim"].focus();
+            return false;
+        }
+        // Validasi E-mail
+        if (document.forms["formBiodata"]["email"].value == "") {
+            alert("Masukkan E-mail Aktif Anda");
+            document.forms["formBiodata"]["email"].focus();
+            return false;
+        }
+        // Validasi Username
+        if (document.forms["formBiodata"]["username"].value == "") {
+            alert("Masukkan Username Anda");
+            document.forms["formBiodata"]["username"].focus();
+            return false;
+        }
+        // Validasi Password
+        if (document.forms["formBiodata"]["password"].value == "") {
+            alert("Masukkan Password Anda");
+            document.forms["formBiodata"]["password"].focus();
+            return false;
+        }
+        // Validasi Program Studi
+        if (document.forms["formBiodata"]["hobi"].selectedIndex < 1) {
+            alert("Pilih Hobi Kesukaan Anda");
+            document.forms["formBiodata"]["hobi"].focus();
+            return false;
+        }
+        // Validasi Jenis Kelamin
+        var jeniskelamin = document.getElementsByName('jeniskelamin');
+        var genValue = false;
+          for(var i=0; i<jeniskelamin.length;i++){
+            if(jeniskelamin[i].checked == true){
+                genValue = true;    
+            }
+          }
+          if(!genValue){
+            alert("Pilih Jenis Kelamin Anda");
+            return false;
+          }
+        // Validasi Mata Kuliah
+        var matakuliah = document.getElementsByName('matakuliah[]');
+        var genValue = false;
+          for(var i=0; i<matakuliah.length;i++){
+            if(matakuliah[i].checked == true){
+                genValue = true;    
+            }
+          }
+          if(!genValue){
+            alert("Anda Belum Memilih Mata Kuliah Hari Ini");
+            return false;
+          }
+      }
+    </script>
+  </section>
+  <!-- ======= End Form ======= -->
 </body>
 
 </html>
