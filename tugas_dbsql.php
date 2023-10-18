@@ -7,14 +7,14 @@
     // membentuk koneksi ke database mysql
     $conn = new mysqli($servername, $username, $password, $dbname);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Nova Bootstrap Template - About</title>
+  <title>Nanda Surya Bootstrap Template - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -39,7 +39,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: Nova
+  * Template Name: Nanda
   * Updated: Sep 18 2023 with Bootstrap v5.3.2
   * Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
   * Author: BootstrapMade.com
@@ -47,7 +47,7 @@
   ======================================================== -->
 </head>
 
-<body class="page-about">
+<body class="page-index">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -65,15 +65,42 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-
-          </li>
-          <li><a href="dbsql_select.php">List Biodata</a></li>
         </ul>
+        <ul>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <ul>
+       <li><a href="tugasjavascripst.html">Tugas Prognet 1</a></li>
+        </ul>
+        <ul>
+          <li><a href="tugasjava.html">Tugas Prognet 2</a></li>
+        </ul>
+        <ul>
+          <li><a href="tugas_dbsql.php"class="active">Tugas Prognet 3</a></li>
+        </ul>
+        <ul>
+        <li><a class="nav-link scrollto" href="dbsql_select.php">List Tugas Prognet 3</a></li>
+    </ul>
       </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/nanda222.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center">
+
+        <h2>Tugas Prognet 3</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>About</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
 
   <main id="main"><!-- Start main -->
 
